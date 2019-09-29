@@ -8,6 +8,9 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
+    if genre.uniq?
+      @@genres << genre
+    end
   end
 
   attr_accessor :name
