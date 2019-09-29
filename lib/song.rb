@@ -7,6 +7,8 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
+    @@count +=1
+    @@genres << genre
   end
 
   attr_accessor :name
@@ -18,7 +20,7 @@ class Song
   end
 
   def self.genres
-    @@genres.uniq
+    @@genres.uniq!
   end
 
 end
